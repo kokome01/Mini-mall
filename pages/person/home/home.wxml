@@ -1,0 +1,37 @@
+<!--pages/person/home/home.wxml-->
+<view>
+  <view class='home_head'>
+    <image class='home_backgroundImg' src='{{home.backgroundImg}}'></image>
+    <view class='home_relative'>
+      <image class='home_personImg' src="{{home.personImg}}"></image>
+      <view class='home_personName'>({{home.name}})</view>
+    </view>
+  </view>
+  <view class='home_order'>
+    <view class='order_h1'>我的订单</view>
+    <view class='order_ul'>
+      <block wx:for="{{orderIcon}}" wx:key="index">
+        <view class='order_li' >
+          <image class='order_li_img' src='{{item.icon}}'></image>
+          <view class='order_li_text'>{{item.name}}<label class='order_num'>{{item.num}}</label></view>
+        </view>
+      </block>
+    </view>
+  </view>
+  <view class='home_other'>
+    <view class='order_ul'>
+      <block wx:for="{{otherIcon}}" wx:key="index">
+        <view class='order_li' >
+          <image class='order_li_img' src='{{item.icon}}'></image>
+          <view class='order_li_text'>{{item.name}}</view>
+        </view>
+      </block>
+    </view>
+  </view>
+  <view class='home_new_order'>
+    <view class='order_h1'>最近订单</view>
+      <import src="../../../template/assembly.wxml"/> 
+      <template is="productList" data="{{productList}}"/>
+  </view>
+
+</view>

@@ -1,0 +1,15 @@
+<!--pages/product/searchList/searchList.wxml-->
+<view>
+  <view class='search_choose'>
+    <view class='choose_ul'>
+      <view class='choose_li {{chooseType == 1?"choose_li_on":""}}' bindtap='chooseType' data-val="1">综合排序</view>
+      <view class='choose_li {{chooseType == 2?"choose_li_on":""}}' bindtap='chooseType' data-val="2">价格优先</view>
+      <view class='choose_li {{chooseType == 3?"choose_li_on":""}}' bindtap='chooseType' data-val="3">筛选</view>
+    </view>
+  </view>
+  <view class='search_product'>
+    {{product[0].name}}
+    <import src="../../../template/assembly.wxml"/> 
+    <template is="productList" data="{{productList}}"/>
+  </view>
+</view>

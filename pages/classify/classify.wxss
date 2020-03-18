@@ -1,0 +1,42 @@
+.menu_box{
+  width: 100px;
+  text-align:center;
+  background-color: #f1f1f1;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
+.menu_li{
+  padding:15px 10px;
+  border-bottom:1px solid #fff; 
+} 
+.menu_li_on{
+  background-color: #fff;
+}
+.menu_text{ 
+  padding: 10px;
+  font-size: 14px;
+}
+/**/
+.class_menu{
+  margin-left: 100px;
+  padding: 10px;
+  background-color: #fff;
+}
+.class_top{
+  font-size: 14px;
+  margin-bottom:20px; 
+}
+.class_li{
+  width: 44px;
+  height: 30px;
+  display: inline-block;
+  font-size: 12px;
+  border: 1px solid #f1f1f1;
+  padding:5px 13px;
+  overflow: hidden;
+  text-align:center;
+  
+  vertical-align:middle;
+}

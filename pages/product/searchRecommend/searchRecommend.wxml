@@ -1,0 +1,15 @@
+<!--pages/product/seachRecommend/seachRecommend.wxml-->
+<view>
+  <view class='search_box'>
+    <view class='input_box'>
+      <image class='search_icon' src='{{searchIcon}}'></image>
+      <input class='search_input' placeholder-class="search_placeholder" placeholder="请输入需要查询的商品" ></input>
+    </view>
+    <view class='search_text' bindtap='searchTap'>搜索</view>
+  </view>
+  <view class='recommend_box'>
+    <block wx:for="{{recommendVal}}" wx:key="index">
+      <view class='recommend_text'>{{item}}</view>
+    </block>
+  </view>
+</view>

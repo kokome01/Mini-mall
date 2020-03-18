@@ -1,0 +1,93 @@
+<!--index.wxml-->
+<view>
+  <view class='index_input_box'>
+    <view class='index_input'>
+      <input class='index_input' bindfocus="getSearch" value="搜索商品"></input>
+    </view>
+  </view>
+  <view>
+    <swiper indicator-dots="true" indicator-color="#888" indicator-active-color="#353535" autoplay="true" circular="true">
+      <block wx:for="{{imgUrls}}" wx:key="index">
+        <swiper-item>
+          <image src='{{item}}' class='swiper_img'></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view>
+    <view class='menu_ul'>
+      <view class='menu_li' wx:for="{{menu[0]}}" wx:key="index">
+        <image class='menu_img menu_img_{{index+1}}' src='{{item.img}}'></image>
+        <text>{{item.name}}</text>
+      </view>
+    </view>
+    <view class='menu_ul'>
+      <view class='menu_li ' wx:for="{{menu[1]}}" wx:key="index">
+        <image class='menu_img menu_img_{{index+5}}' src='{{item.img}}'></image>
+        <text>{{item.name}}</text>
+      </view>
+    </view>
+  </view>
+  <view class='news_hot'>
+    <text class='news_text1'>快报</text>
+    <text class='news_text2'>HOT</text>
+    <text class='news_text3'>{{news[1]}}</text>
+  </view>
+  <view class='index_recommend'>
+    <view>
+      <view class='recommend_head'>今日推荐</view>
+      <view class="recommend_box">
+        <block wx:for="{{recommend}}" wx:key="index">
+          <view class='recommend_li' bindtap='detailedTap'>
+            <image class='recommend_img' src='{{item.img}}'></image>
+            <view class='recommend_text'>{{item.name}}</view>
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+  <view class='product_box'>
+    <view class='product_head'>计/生/用/品</view>
+    <view class='product_most'>更多</view>
+    <image class='image_xi' src='{{image.xi}}'></image>
+    <view class='product_ul'>
+      <view class='product_li' wx:for="{{procuct_li_1}}" wx:key="index">
+        <image class='product_img' src='{{item.img}}'></image>
+        <view class='product_text'>{{item.name}}</view>
+      </view>
+    </view>
+  </view>
+  <view class='product_box'>
+    <view class='product_head'>医/学/护/肤</view>
+    <view class='product_most'>更多</view>
+    <image class='image_xi' src='{{image.xi}}'></image>
+    <view class='product_ul'>
+      <view class='product_li' wx:for="{{procuct_li_1}}" wx:key="index">
+        <image class='product_img' src='{{item.img}}'></image>
+        <view class='product_text'>{{item.name}}</view>
+      </view>
+    </view>
+  </view>
+  <view class='product_box'>
+    <view class='product_head'>婴/儿/用/品</view>
+    <view class='product_most'>更多</view>
+    <image class='image_xi' src='{{image.xi}}'></image>
+    <view class='product_ul'>
+      <view class='product_li' wx:for="{{procuct_li_1}}" wx:key="index">
+        <image class='product_img' src='{{item.img}}'></image>
+        <view class='product_text'>{{item.name}}</view>
+      </view>
+    </view>
+  </view>
+  <view class='product_box'>
+    <view class='product_head'>医/疗/器/械</view>
+    <view class='product_most'>更多</view>
+    <image class='image_xi' src='{{image.xi}}'></image>
+    <view class='product_ul'>
+      <view class='product_li' wx:for="{{procuct_li_1}}" wx:key="index">
+        <image class='product_img' src='{{item.img}}'></image>
+        <view class='product_text'>{{item.name}}</view>
+      </view>
+    </view>
+  </view>
+</view>

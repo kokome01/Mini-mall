@@ -1,0 +1,54 @@
+<!--pages/shopcart/shopcart.wxml-->
+<view>
+  <view class='shopcart_head'>
+    <text class='shopcart_hi'>购物车</text>
+    <view class='shopcart_bindtap' >编辑</view>
+  </view>
+  <view class='shopcart_product'>
+    <block wx:for="{{shopcart}}" wx:for-item="factory" wx:for-index="idx" wx:key="idx">
+      <view class='procuct_factory'>
+        <view class='factory_box'>
+          <checkbox-group class="checked checked_factory" bindchang="factoryChang">
+            <label class='factory_free'>免运费</label>
+            <label>
+              <checkbox class='checked_name' value='{{factory.name}}' checked='{{factory.checked}}'>{{factory.name}}
+              </checkbox>
+            </label>
+          </checkbox-group>
+        </view>
+        <view class='product_list'>
+          <block wx:for="{{factory.product}}" wx:key="index">
+            <view class='product_relative'>
+              <image class='product_img' src="{{item.img}}"></image>
+              <view class='product_content'>
+                <view class='product_name' class='product_name'>{{item.name}}</view>
+                <view class='product_specifications' class='product_specifications'>规格：{{item.specifications}}</view>
+                <view class='product_price' class='product_price'>￥{{item.price}}</view>
+              </view>
+              <view class='num_box'>
+                <view class='num_float'>
+                  <text class='num_reduce num_but'>-</text>
+                  <text class='num_val num_but'>1</text>
+                  <text class='num_add num_but'>+</text>
+                </view>
+              </view>
+            </view>
+          </block>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view class='shopcart_foot'>
+    <view class='foot_relative'>
+      <checkbox-group class="checked checked_total" bindchang="totalChang">
+        <label>
+          <checkbox class='checked_quan' value='全选' checked='{{checked.total}}'>全选</checkbox>
+        </label>
+      </checkbox-group>
+      <view class='totle_price'>合计：
+        <label class='totle_num'>￥{{totle.price}}</label>
+      </view>
+      <view class='totle_but'>结算</view>
+    </view>
+  </view>
+</view>

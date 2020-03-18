@@ -1,0 +1,23 @@
+/* pages/product/searchList/searchList.wxss */
+@import "../../../template/assembly.wxss";
+
+/**/
+page{
+  background-color: #fff;
+}
+.choose_ul{
+  background-color: #f1f1f1;
+  display: flex;
+}
+.choose_li{
+  flex: 1 1 auto;
+  font-size: 24rpx;
+  text-align: center;
+  color: #353535;
+  padding: 20rpx;
+}
+.choose_li_on{
+  color: #0b74df;
+  border-bottom: 1px solid #0b74df;
+}
+/**/

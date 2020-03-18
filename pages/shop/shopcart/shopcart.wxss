@@ -1,0 +1,132 @@
+/* pages/shopcart/shopcart.wxss */
+/*head*/
+.shopcart_head{
+  padding: 20rpx;
+}
+.shopcart_bindtap{
+  float: right;
+  font-size: 24rpx;
+}
+/*procuct*/
+.shopcart_product{
+  padding: 20rpx;
+}
+.procuct_factory{
+  background-color: #fff;
+  border-radius:20rpx; 
+  padding:0rpx 15rpx 15rpx 15rpx;
+}
+.factory_box{
+  margin-bottom: 10rpx;
+}
+checkbox .wx-checkbox-input{
+  border-radius:50%;
+  width:30rpx;height:30rpx;
+}
+.checked_name{
+  font-size: 28rpx;
+}
+.factory_free{
+  float: right;
+  color: #888;
+  font-size: 20rpx;
+  margin-top: 17rpx;
+}
+.product_list{
+  border-top:1px solid #f1f1f1;
+  padding: 20rpx 0rpx;
+}
+.product_relative{
+  position: relative;
+  margin-bottom: 40rpx;
+}
+.product_relative:last-child{
+  position: relative;
+  margin-bottom: 1rpx;
+}
+.product_name{
+  color: #353535;
+  font-size: 24rpx;
+  height: 60rpx;
+}
+.product_specifications{
+  color: #888;
+  font-size: 24rpx;
+}
+.product_price{
+  color: #cc0000;
+  font-size: 24rpx;
+}
+.product_img{
+  width: 120rpx;
+  height: 120rpx;
+  border: 1px solid #f1f1f1;
+  border-radius:5rpx; 
+  position: absolute;
+  top: 0rpx;
+  left: 0rpx;
+}
+.product_content{
+  margin-left: 140rpx;
+}
+/*num*/
+.num_box{
+  height: 30rpx;
+  margin-bottom: 20rxp;
+}
+.num_float{
+  float: right;
+}
+.num_but{
+  display: inline-block;
+  border: 1px solid #f1f1f1;
+  height: 40rpx;
+  width: 40rpx;
+  text-align: center;
+  color: #353535;
+  font-size: 30rpx;
+}
+.num_val{
+  width: 80rpx;
+}
+/*foot*/
+.shopcart_foot{
+  height: 81rpx;
+  width: 100%;
+  background-color: #fff;
+  border-top:1px solid #f1f1f1; 
+  position: fixed;
+  bottom: 0rpx;
+}
+.foot_relative{
+  position: relative;
+}
+.checked_total{
+  padding: 10rpx;
+}
+.checked_quan{
+  font-size:24rpx; 
+}
+.totle_price{
+  position: absolute;
+  top: 26rpx;
+  right: 200rpx;
+  font-size: 24rpx;
+}
+.totle_num{
+  font-size: 24rpx;
+  color: #cc0000;
+}
+.totle_but{
+  background-color: #cc0000;
+  position: absolute;
+  top: 7rpx;
+  right: 10rpx;
+  color: #fff;
+  font-size: 24rpx;
+  height: 70rpx;
+  width: 160rpx;
+  text-align: center;
+  border-radius:70rpx;
+  line-height: 70rpx;
+}

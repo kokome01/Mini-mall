@@ -1,0 +1,35 @@
+
+/*product*/
+.product_box{
+  position: relative;
+  background-color: #fff;
+  padding: 20rpx;
+  border-bottom: 1px solid #f1f1f1;
+}
+.product_content{
+  margin-left: 150rpx;
+}
+.product_img{
+  width: 120rpx;
+  height: 120rpx;
+  border: 1px solid #f1f1f1;
+  border-radius:5rpx; 
+  position: absolute;
+  top: 20rpx;
+  left: 20rpx;
+}
+.product_name{
+  font-size: 28rpx;
+  color: #353535;
+  height: 60rpx;
+  overflow: hidden;
+  line-height: 30rpx;
+}
+.product_specifications{
+  color: #888;
+  font-size: 24rpx;
+}
+.product_price{
+  color: #cc0000;
+  font-size: 24rpx;
+}

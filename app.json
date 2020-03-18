@@ -1,0 +1,55 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/person/home/home",
+    "pages/classify/classify",
+    "pages/shop/shopcart/shopcart",
+    "pages/logs/logs",
+    "pages/product/searchRecommend/searchRecommend",
+    "pages/product/searchList/searchList",
+    "pages/product/detailed/detailed"
+  ],
+  "window":{
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "商城",
+    "navigationBarTextStyle":"light",
+    "backgroundColor": "#eeeeee", 
+    "backgroundTextStyle": "dark",
+    "enablePullDownRefresh": false, 
+    "onReachBottomDistance": 50
+  },
+  "tabBar": {
+    "position": "bottom",
+    "color":"#666",
+    "selectedColor":"#0b74df",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "assets/img/icon/home (2).png",
+      "selectedIconPath": "assets/img/icon/home (1).png"
+    },
+    {
+      "pagePath": "pages/classify/classify",
+      "text": "分类",
+      "iconPath": "assets/img/icon/class (2).png",
+      "selectedIconPath": "assets/img/icon/class (1).png"
+    },
+    {
+      "pagePath": "pages/shop/shopcart/shopcart",
+      "text": "购物车",
+      "iconPath": "assets/img/icon/shopcart (2).png",
+      "selectedIconPath": "assets/img/icon/shopcart (1).png"
+    },
+    {
+      "pagePath": "pages/person/home/home",
+      "text": "个人",
+      "iconPath": "assets/img/icon/person (2).png",
+      "selectedIconPath": "assets/img/icon/person (1).png"
+    }]
+  },
+  "networkTimeout": { 
+    "request": 10000, 
+    "downloadFile": 10000 
+  },
+  "debug": false
+}

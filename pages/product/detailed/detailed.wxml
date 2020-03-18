@@ -1,0 +1,104 @@
+<!--pages/product/detailed/detailed.wxml-->
+<view>
+  <view class='detailed_head'>
+    <view class='choose_ul'>
+      <view class='choose_li {{chooseType == 1?"choose_li_on":""}}' bindtap='chooseType' data-val="1">商品</view>
+      <view class='choose_li {{chooseType == 2?"choose_li_on":""}}' bindtap='chooseType' data-val="2">详细</view>
+      <view class='choose_li {{chooseType == 3?"choose_li_on":""}}' bindtap='chooseType' data-val="3">评价</view>
+    </view>
+  </view>
+  <view class='detailed_introduce' wx:if='{{chooseType == 1?"choose_li_on":""}}'>
+    <swiper indicator-dots="true" indicator-color="#888" indicator-active-color="#353535" autoplay="true" circular="true">
+      <block wx:for="{{imgUrls}}" wx:key="index">
+        <swiper-item>
+          <image src='{{item}}' class='swiper_img'></image>
+        </swiper-item>
+      </block>
+    </swiper>
+    
+    <view class='introduce_name'>
+      <image class='name_tagging' src="{{product.tagging}}"></image>
+      <view class='name_val'>{{product.name}}</view>
+    </view>
+    <view class='introduce_price'>
+      <text>零售价:</text>
+      <text>￥</text>
+      <text>{{product.price}}</text>
+    </view>
+    <view class='introduce_price'>
+      <text>邮费：</text>
+      <text>￥</text>
+      <text>{{product.free}}</text>
+    </view>
+    <view class='introduce_accumulate'>
+      <view class='introduce_accumulate_li'>
+        浏览量
+        <label>{{product.seeNum}}</label>
+      </view>
+      <view class='introduce_accumulate_li'>
+        累积购买
+        <label>{{product.payNum}}</label>
+      </view>
+      <view class='introduce_accumulate_li'>
+        累积评价
+        <label>{{product.evaluateNum}}</label>
+      </view>
+    </view>
+    <view class='introduce_choose' bindtap="popShow">
+      <view>可选规格</view>
+      <image class='introduce_choose_img' src='{{rightImg}}'></image>
+    </view>
+  </view>
+  <view class='detailed_other' wx:if='{{chooseType == 2?"choose_li_on":""}}'>
+  
+  </view>
+  <view class='detailed_evaluate' wx:if='{{chooseType == 3?"choose_li_on":""}}'>
+  
+  </view>
+  <view class='detailed_foot'>
+    <view class='foot_but'>
+      <view class='foot_but_ul'>
+        <view class='foot_but_li'>
+          <image class='foot_but_img' src="{{foot.icon[0]}}"></image>
+          <view class='foot_but_text'>首页</view>
+        </view>
+        <view class='foot_but_li'>
+          <image class='foot_but_img' src="{{foot.icon[1]}}"></image>
+          <view class='foot_but_text'>购物车</view>
+        </view>
+        <view class='foot_but_li'>
+          <image class='foot_but_img' src="{{foot.icon[2]}}"></image>
+          <view class='foot_but_text'>收藏</view>
+        </view>
+      </view>
+      <view class='foot_shop' bindtap="popShow">加入购物车</view>
+    </view>
+  </view>
+  <view class='black' bindtap="popHide" wx:if="{{popShow}}"></view>
+  <view class='detailed_pop' wx:if="{{popShow}}">
+    <view class='pop_head'>
+      <image class='pop_img' src="{{pop.img}}"></image>
+      <view class='pop_price'>￥{{pop.price}}</view>
+      <image class='pop_del' src="{{pop.del}}" bindtap="popHide"></image>
+    </view>
+    <view class='pop_body'>
+      <view class='specifications_box'>
+        <view>规格</view>
+        <view>
+          <view class='specifications_li' wx:for="{{pop.specifications}}" wx:key="index">{{item}}</view>
+        </view>
+      </view>
+      <view class='pop_num_box'>
+        <view>数量</view>
+        <view class='pop_num_ul'>
+          <view class='pop_num_li'>-</view>
+          <view class='pop_num_li'>1</view>
+          <view class='pop_num_li'>+</view>
+        </view>
+      </view>
+    </view>
+    <view class='pop_foot'>
+      <view>确认</view>
+    </view>
+  </view>
+</view>

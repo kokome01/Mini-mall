@@ -1,0 +1,13 @@
+<view>  
+  <view class="menu_box">
+    <view class="menu_li {{menuIndex == item.arr?'menu_li_on':''}}" wx:for="{{menu}}" bindtap="menu" wx:key="{{item.arr}}" data-index="{{item.arr}}">
+      <text class="menu_text" >{{item.val}}</text>
+    </view>
+  </view>
+  <view class="class_menu" wx:for="{{classify}}" wx:for-item="item1" wx:key="{{item1.arr}}" wx:if="{{menuIndex == item1.type||menuIndex == 0}}">
+    <view class="class_top">{{item1.top}}</view>
+    <view class="class_ul" >
+      <view class="class_li" wx:for="{{item1.kind}}" wx:for-item="item2" wx:key="{{item2.arr}}">{{item2.val}}</view>
+    </view>
+  </view>
+</view>
