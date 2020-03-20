@@ -33,12 +33,14 @@ Page({
       price: 0.00
     }
   },
-
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    wx.setStorage({
+      key: 'name',
+      data: '钥匙大小',
+    })
   },
 
   /**
@@ -88,5 +90,10 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+  getPay:function () {
+    wx.navigateTo({
+      url: "../pay/pay"
+    });
   }
 })

@@ -50,10 +50,27 @@
     </view>
   </view>
   <view class='detailed_other' wx:if='{{chooseType == 2?"choose_li_on":""}}'>
-  
+    <view class='other_h1'>产品参数</view>
+    <view class='other_text'>
+      <view>生产厂家：{{product.factory}}</view>
+      <view>产品规格：{{product.specifications}}</view>
+      <view>品牌：{{product.brand}}</view>
+      <view>是否是处方药：{{product.prescription}}</view>
+      <view>经营药房：{{product.drugstore}}</view>
+      <view>批准文号：{{product.approval}}</view>
+      <view>剂型：{{product.dosage}}</view>
+    </view>
+    <view class='other_h1'>产品细节</view>
   </view>
   <view class='detailed_evaluate' wx:if='{{chooseType == 3?"choose_li_on":""}}'>
-  
+    <view class='evaluate_name'>商品名字：{{product.name}}</view>
+    <view class='evaluate_val'>好评率{{evaluate.val}}</view>
+    <view class='evaluate_head_ul'>
+      <view>全部（{{evaluate.totle}}）</view>
+      <view>好评（{{evaluate.good1}}）</view>
+      <view>中评（{{evaluate.good2}}）</view>
+      <view>差评（{{evaluate.good3}}）</view>
+    </view>
   </view>
   <view class='detailed_foot'>
     <view class='foot_but'>
@@ -75,7 +92,7 @@
     </view>
   </view>
   <view class='black' bindtap="popHide" wx:if="{{popShow}}"></view>
-  <view class='detailed_pop' wx:if="{{popShow}}">
+  <view class='detailed_pop' animation="{{animationData}}" >
     <view class='pop_head'>
       <image class='pop_img' src="{{pop.img}}"></image>
       <view class='pop_price'>￥{{pop.price}}</view>
@@ -97,7 +114,7 @@
         </view>
       </view>
     </view>
-    <view class='pop_foot'>
+    <view class='pop_foot' bindtap='aa'>
       <view>确认</view>
     </view>
   </view>

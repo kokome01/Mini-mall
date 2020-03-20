@@ -36,7 +36,6 @@
   padding: 20rpx;
   color: #383838;
   font-size: 28rpx;
-  padding-bottom: 10rpx;
 }
 .order_ul{
   display: flex;

@@ -1,0 +1,4 @@
+<!--pages/shop/pay/pay.wxml-->
+<view >
+  <view bindtap="aa">{{val}}</view>
+</view>

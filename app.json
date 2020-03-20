@@ -4,6 +4,7 @@
     "pages/person/home/home",
     "pages/classify/classify",
     "pages/shop/shopcart/shopcart",
+    "pages/shop/pay/pay",
     "pages/logs/logs",
     "pages/product/searchRecommend/searchRecommend",
     "pages/product/searchList/searchList",

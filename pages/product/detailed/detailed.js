@@ -15,7 +15,21 @@ Page({
       seeNum:123,
       payNum:23,
       evaluateNum:12,
-      tagging:"../../../assets/img/icon/ico_bs1.jpg"
+      tagging:"../../../assets/img/icon/ico_bs1.jpg",
+      factory:"湖南一格",
+      specifications:"150ml/瓶",
+      brand:"大力",
+      prescription:"非处方",
+      drugstore:"株洲县衙大药房",
+      approval:"国标156456454",
+      dosage:"液体剂",
+    },
+    evaluate:{
+      val:"0%",
+      totle: 0,
+      good1: 0,
+      good2: 0,
+      good3: 0
     },
     popShow:true,
     foot:{
@@ -34,14 +48,15 @@ Page({
         "200ml/只",
         "300ml/只"
       ]
-    }
+    },
+    animationData: {},
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    this.popHide()
   },
 
   /**
@@ -98,13 +113,34 @@ Page({
     })
   },
   popShow:function (e){
+    //显示pop
     this.setData({
       popShow: true
+    });
+    //动画
+    var animation = wx.createAnimation({
+      duration: 1000,
+      timingFunction: "ease",
+    })
+    animation.translate(0, 0).step();
+
+    this.setData({
+      animationData: animation.export()
     })
   },
   popHide:function(e) {
     this.setData({
       popShow: false
     })
-  },
+    //动画
+    var animation = wx.createAnimation({
+      duration: 1000,
+      timingFunction: "ease",
+    })
+    animation.translate(0, 300).step();
+
+    this.setData({
+      animationData: animation.export()
+    })
+  }
 })

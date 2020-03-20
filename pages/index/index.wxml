@@ -38,7 +38,7 @@
       <view class='recommend_head'>今日推荐</view>
       <view class="recommend_box">
         <block wx:for="{{recommend}}" wx:key="index">
-          <view class='recommend_li' bindtap='detailedTap'>
+          <view class='recommend_li' bindtap='detailedTap' data-proId="{{item.id}}">
             <image class='recommend_img' src='{{item.img}}'></image>
             <view class='recommend_text'>{{item.name}}</view>
           </view>

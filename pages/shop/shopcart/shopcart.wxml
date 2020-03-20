@@ -48,7 +48,7 @@
       <view class='totle_price'>合计：
         <label class='totle_num'>￥{{totle.price}}</label>
       </view>
-      <view class='totle_but'>结算</view>
+      <view class='totle_but' bindtap='getPay'>结算</view>
     </view>
   </view>
 </view>
